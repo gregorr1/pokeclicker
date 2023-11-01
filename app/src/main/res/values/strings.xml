@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PokeClicker</string>
+    <string name="pokemon_number">#</string>
+    <string name="pokemon_name">Pokémon</string>
+    <string name="pokemon_clicks">Clicks</string>
+    <string name="records_button">Records</string>
+    <string name="click_button">Click</string>
+</resources>

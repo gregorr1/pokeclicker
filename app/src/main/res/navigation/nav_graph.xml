@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.pokeclicker.StartFragment"
+        android:label="PokéClicker"
+        tools:layout="@layout/fragment_start">
+        <action
+            android:id="@+id/action_startFragment_to_pokemonFragment"
+            app:destination="@id/pokemonFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_recordsFragment"
+            app:destination="@id/recordsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pokemonFragment"
+        android:name="com.example.pokeclicker.overview.OverviewFragment"
+        android:label="PokéClicker"
+        tools:layout="@layout/fragment_overview"/>
+    <fragment
+        android:id="@+id/recordsFragment"
+        android:name="com.example.pokeclicker.RecordsFragment"
+        android:label="Number of Clicks"
+        tools:layout="@layout/fragment_records" />
+</navigation>

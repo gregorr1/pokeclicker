@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    tools:context=".RecordsFragment"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/records_header"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" >
+
+        <TextView
+            android:id="@+id/pokemon_number"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:text="@string/pokemon_number"
+            style="@style/Widget.PokeClicker.TextViewLeft"
+            app:layout_constraintEnd_toStartOf="@+id/pokemon_name"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/pokemon_name"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_margin="4dp"
+            android:layout_weight="2"
+            style="@style/Widget.PokeClicker.TextViewMid"
+            android:text="@string/pokemon_name"
+            app:layout_constraintEnd_toStartOf="@+id/pokemon_clicks"
+            app:layout_constraintStart_toEndOf="@+id/pokemon_number" />
+
+        <TextView
+            android:id="@+id/pokemon_clicks"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:text="@string/pokemon_clicks"
+            style="@style/Widget.PokeClicker.TextViewRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/pokemon_name" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/records_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/records_header" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/records_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
